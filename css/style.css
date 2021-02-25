@@ -1,0 +1,350 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('font/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('font/BebasNeue.ttf');
+}
+
+body {
+    font-family: Montserrat;
+}
+
+.navbar {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar-brand {
+    font-family: BebasNeue;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+.jumbotron {
+    position: relative;
+    background-image: url(../img/1.jpg);
+    background-size: cover;
+    height: 500px;
+    text-align: center;
+
+}
+
+.jumbotron .display-4 {
+    color: white;
+    font-size: 34px;
+    margin-top: 100px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
+}
+
+.jumbotron .display-4 span {
+    font-weight: 600;
+}
+
+.jumbotron .container {
+    position: relative;
+    z-index: 1;
+}
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    bottom: 0;
+
+}
+
+/* info panel */
+.info-panel {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    margin-top: -110px;
+    background-color: white;
+    padding: 30px;
+
+}
+
+.info-panel img {
+    width: 90px;
+    height: 70px;
+    display: flex;
+    transition: all .3s linear;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.info-panel img:hover {
+    transform: scale(1.2);
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.info-panel h4 {
+    font-family: BebasNeue;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.info-panel p {
+    font-size: 14px;
+    color: rgba(135, 138, 135, 0.8);
+}
+
+/* workingspace */
+.workingspace {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.workingspace img {
+    border-radius: 20px;
+}
+
+.workingspace h3 {
+    font-size: 52px;
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-top: 30px;
+}
+
+.workingspace p {
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.workingspace h3 span {
+    font-weight: 900;
+}
+
+/* testimonial */
+.testimonial {
+    margin-top: 120px;
+}
+
+.testimonial figure {
+    text-align: center;
+}
+
+.testimonial h3 {
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 18px;
+}
+
+
+
+/* .testimonial .figure{
+    background: #1c2c5d;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+} */
+.testimonial figure img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    margin: 20px 15px 5px;
+    opacity: 0.7;
+    transition: 0.2s ease-in;
+
+
+}
+
+.testimonial figure img:hover {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    scale: 1px;
+    margin-top: 5px;
+
+
+}
+
+.testimonial figure img.utama {
+    width: 100px;
+    height: 100px;
+    margin: 20px 15px 5px;
+    opacity: 1;
+    margin-top: 10px;
+
+}
+
+.testimonial figure h5 {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    color: #1c2c5d;
+}
+
+.testimonial figure p {
+    font-size: 14px;
+    font-style: normal;
+    color: #1f2020;
+    margin-top: -5px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: rgb(15, 15, 15);
+    text-align: center;
+    margin: 40px 40px 30px;
+
+}
+
+/* Utility */
+
+.tombol {
+    text-transform: uppercase;
+    border-radius: 40px;
+}
+
+
+.button {
+    -webkit-box-flex: 1;
+    position: relative;
+    padding: 10px;
+    border: 2px solid #881238;
+    color: antiquewhite;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition: .35s;
+    transition: .35s;
+}
+
+
+.button:hover:before {
+    left: -10%;
+    width: 120%;
+
+}
+
+.button:before {
+    content: '';
+    color: antiquewhite;
+    position: absolute;
+    -webkit-transition: .35s;
+    transition: .35s;
+    width: 0;
+    top: 0;
+    height: 100%;
+    left: -10%;
+    -webkit-transform: skewX(15deg);
+    transform: skewX(15deg);
+    z-index: -1;
+    background-color: #881238;
+}
+
+
+/* DESKTIO VERSION */
+@media (min-width: 992px) {
+
+    .judul {
+        color: white !important;
+    }
+
+   
+    .navbar-brand .nav-link {
+        background: #1f2020;
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0, 0.5);
+    }
+
+    .nav-link {
+        font-family: Montserrat;
+        text-transform: uppercase;
+        margin-right: 30px;
+        color: white;
+    }
+
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid blue;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+
+    .jumbotron {
+        margin-top: -90px;
+        height: 400;
+    }
+
+    .jumbotron .display-4 {
+        color: white;
+        font-size: 3em;
+        margin-top: 120px;
+        position: relative;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+        margin-bottom: 30px;
+    }
+
+    .workingspace {
+        text-align: left;
+    }
+
+    .testimonial h3 {
+        font-size: 34px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        background: #1f2020;
+    }
+
+    .navbar-nav{
+        text-align: center;
+    }
+
+    .navbar .judul{
+        font-size: 16px;
+        color:#fff;
+    }
+
+    .navbar-nav .nav-link{
+        color: #fff;
+    }
+
+    button:focus{
+        outline: none;
+    }
+
+    .navbar .navbar-toggler{
+        border-color: rgb(255,102,203);
+        width: 47px;
+        height: 34px;
+    }
+
+    .navbar .navbar-toggler .line{
+        width: 100%;
+        float: left;
+        height: 2px;
+        background-color: #fff;
+        margin-bottom: 5px;
+    }
+    .navbar .navbar-toggler .navbar-toggler-icon .fas{
+       width: 10px;
+       height: 2px;
+       background: #fff;
+    }
+
+}
